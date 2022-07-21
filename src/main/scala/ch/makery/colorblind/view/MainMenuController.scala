@@ -9,22 +9,24 @@ import scalafx.scene.control.Button
 import scalafx.scene.text.Text
 
 @sfxml
-class mainMenuController(
+class MainMenuController(
     menuBG: ImageView
 ) {
+
+    var opacityList = List(0.6, 0.7, 0.8)
 
     menuBG.image = new Image("file:resources/images/color-eye.jpg")
     // Easy - 0.6, Normal - 0.7, Hard - 0.8
     def easyMode(): Unit = {
-        MainApp.startGame(0.6)
+        MainApp.startGame(opacityList(0))
     }
 
     def normalMode(): Unit = {
-        MainApp.startGame(0.7)
+        MainApp.startGame(opacityList(1))
     }
 
     def hardMode(): Unit = {
-        MainApp.startGame(0.8)
+        MainApp.startGame(opacityList(2))
     }
 
     def quitGame(): Unit = {

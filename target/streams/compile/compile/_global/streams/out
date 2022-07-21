@@ -1,7 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\msi\Documents\GitHub\Color-Blind-Scala\src\main\scala\ch\makery\colorblind\MainApp.scala:38:19: identifier expected but 'var' found.[0m
-[0m[[0m[31merror[0m] [0m[0m    def startGame(var opacity: Double): Unit = {[0m
-[0m[[0m[31merror[0m] [0m[0m                  ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\msi\Documents\GitHub\Color-Blind-Scala\src\main\scala\ch\makery\colorblind\MainApp.scala:48:1: ':' expected but '}' found.[0m
-[0m[[0m[31merror[0m] [0m[0m}[0m
-[0m[[0m[31merror[0m] [0m[0m^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\msi\Documents\GitHub\Color-Blind-Scala\src\main\scala\ch\makery\colorblind\view\GameController.scala:34:5: not found: value b[0m
+[0m[[0m[31merror[0m] [0m[0m    b.style = color[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

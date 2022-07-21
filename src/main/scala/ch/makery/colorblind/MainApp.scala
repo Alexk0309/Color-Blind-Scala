@@ -28,19 +28,21 @@ object MainApp extends JFXApp {
     MainApp.stage.setResizable(false)
     
     def showMainMenu(): Unit = {
-        val resource = getClass.getResource("view/mainMenu.fxml")
+        val resource = getClass.getResource("view/MainMenu.fxml")
         val loader = new FXMLLoader(resource, NoDependencyResolver)
         loader.load()
         val roots = loader.getRoot[jfxs.layout.AnchorPane]
         this.roots.setCenter(roots)
     }
 
-    def startGame(var opacity: Double): Unit = {
-        val resource = getClass.getResource("view/game.fxml")
+    def startGame(opacity: Double): Unit = {
+        val resource = getClass.getResource("view/Game.fxml")
         val loader = new FXMLLoader(resource, NoDependencyResolver)
         loader.load()
+        val control = loader.getController[GameController#Controller]
         val roots = loader.getRoot[jfxs.layout.AnchorPane]
         this.roots.setCenter(roots)
+        control.answerButton.opacity = opacity
     }
 
     showMainMenu()
