@@ -13,7 +13,7 @@ class MainMenuController(
     menuBG: ImageView
 ) {
 
-    var opacityList = List(0.6, 0.7, 0.8)
+    var opacityList = List(0.77, 0.8, 0.9)
 
     menuBG.image = new Image("file:resources/images/color-eye.jpg")
     // Easy - 0.6, Normal - 0.7, Hard - 0.8

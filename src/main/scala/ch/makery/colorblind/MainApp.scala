@@ -12,6 +12,8 @@ import scalafx.scene.image._
 
 object MainApp extends JFXApp {
 
+    var score = -1
+
     val rootResource = getClass.getResource("view/RootLayout.fxml")
     val loader = new FXMLLoader(rootResource, NoDependencyResolver)
     loader.load();
@@ -28,6 +30,7 @@ object MainApp extends JFXApp {
     MainApp.stage.setResizable(false)
     
     def showMainMenu(): Unit = {
+        score = -1
         val resource = getClass.getResource("view/MainMenu.fxml")
         val loader = new FXMLLoader(resource, NoDependencyResolver)
         loader.load()
@@ -36,6 +39,7 @@ object MainApp extends JFXApp {
     }
 
     def startGame(opacity: Double): Unit = {
+        score += 1
         val resource = getClass.getResource("view/Game.fxml")
         val loader = new FXMLLoader(resource, NoDependencyResolver)
         loader.load()
@@ -43,6 +47,7 @@ object MainApp extends JFXApp {
         val roots = loader.getRoot[jfxs.layout.AnchorPane]
         this.roots.setCenter(roots)
         control.answerButton.opacity = opacity
+        control.scoreDisplay.setText(score.toString)
     }
 
     showMainMenu()
